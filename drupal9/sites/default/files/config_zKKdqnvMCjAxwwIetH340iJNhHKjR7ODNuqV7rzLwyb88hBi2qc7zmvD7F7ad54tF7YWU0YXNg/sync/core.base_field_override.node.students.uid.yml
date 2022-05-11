@@ -1,0 +1,20 @@
+uuid: 410098b3-5289-4630-a0bd-1b6ddcefe38b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.students
+id: node.students.uid
+field_name: uid
+entity_type: node
+bundle: students
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

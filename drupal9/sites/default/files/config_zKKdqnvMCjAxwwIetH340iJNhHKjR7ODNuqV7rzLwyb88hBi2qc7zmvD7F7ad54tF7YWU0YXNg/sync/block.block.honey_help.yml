@@ -1,0 +1,22 @@
+uuid: f834d1b7-f8df-4ce2-aef9-4721a0ce4f38
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - honey
+_core:
+  default_config_hash: 54bunyLhlPXABruD3BLrznvrIrr9hjMBriwIk4I8fvM
+id: honey_help
+theme: honey
+region: content
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

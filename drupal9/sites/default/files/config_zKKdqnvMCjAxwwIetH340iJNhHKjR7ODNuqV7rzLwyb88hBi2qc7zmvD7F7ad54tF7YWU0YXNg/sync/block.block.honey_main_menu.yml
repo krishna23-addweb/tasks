@@ -1,0 +1,27 @@
+uuid: 78cb3255-a59e-4ef8-a5bc-0b983be1a1d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - honey
+_core:
+  default_config_hash: SoWkuJgjWQUAc75uYqEwUrEKFu8V1kgp5UYohreE_Jg
+id: honey_main_menu
+theme: honey
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

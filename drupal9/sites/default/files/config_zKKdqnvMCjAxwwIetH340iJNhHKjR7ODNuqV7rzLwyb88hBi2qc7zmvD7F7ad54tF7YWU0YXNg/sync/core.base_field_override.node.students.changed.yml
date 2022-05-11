@@ -1,0 +1,18 @@
+uuid: c601fecd-d9a6-4503-968e-2542bea7c7ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.students
+id: node.students.changed
+field_name: changed
+entity_type: node
+bundle: students
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

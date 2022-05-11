@@ -1,13 +1,13 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '9.3.12',
-        'version' => '9.3.12.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '68a1f3fca220f5a126ea50d7eeccfb75216e9cd9',
+        'reference' => '008245e31e83be6f0014846cad189b078901e3b8',
         'name' => 'drupal/legacy-project',
-        'dev' => false,
+        'dev' => true,
     ),
     'versions' => array(
         'asm89/stack-cors' => array(
@@ -397,6 +397,15 @@
                 0 => '9.3.12',
             ),
         ),
+        'drupal/csv_serialization' => array(
+            'pretty_version' => '2.0.0',
+            'version' => '2.0.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/csv_serialization',
+            'aliases' => array(),
+            'reference' => '8.x-2.0',
+            'dev_requirement' => false,
+        ),
         'drupal/datetime' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -530,12 +539,12 @@
             ),
         ),
         'drupal/legacy-project' => array(
-            'pretty_version' => '9.3.12',
-            'version' => '9.3.12.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '68a1f3fca220f5a126ea50d7eeccfb75216e9cd9',
+            'reference' => '008245e31e83be6f0014846cad189b078901e3b8',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -778,6 +787,15 @@
                 0 => '9.3.12',
             ),
         ),
+        'drupal/views_data_export' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/views_data_export',
+            'aliases' => array(),
+            'reference' => '8.x-1.1',
+            'dev_requirement' => false,
+        ),
         'drupal/views_ui' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -866,6 +884,15 @@
             'install_path' => __DIR__ . '/../laminas/laminas-stdlib',
             'aliases' => array(),
             'reference' => 'db581851a092246ad99e12d4fddf105184924c71',
+            'dev_requirement' => false,
+        ),
+        'league/csv' => array(
+            'pretty_version' => '9.8.0',
+            'version' => '9.8.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/csv',
+            'aliases' => array(),
+            'reference' => '9d2e0265c5d90f5dd601bc65ff717e05cec19b47',
             'dev_requirement' => false,
         ),
         'masterminds/html5' => array(

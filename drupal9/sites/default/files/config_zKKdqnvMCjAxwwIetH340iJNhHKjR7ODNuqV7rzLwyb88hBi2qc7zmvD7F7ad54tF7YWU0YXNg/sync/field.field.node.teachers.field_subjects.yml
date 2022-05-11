@@ -1,0 +1,19 @@
+uuid: 33cc682f-dbf5-4723-9d2e-3381752633f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subjects
+    - node.type.teachers
+id: node.teachers.field_subjects
+field_name: field_subjects
+entity_type: node
+bundle: teachers
+label: Subjects
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

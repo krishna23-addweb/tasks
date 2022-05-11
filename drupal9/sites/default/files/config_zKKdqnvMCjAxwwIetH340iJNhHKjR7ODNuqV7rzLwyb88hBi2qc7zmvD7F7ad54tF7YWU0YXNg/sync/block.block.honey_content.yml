@@ -1,0 +1,22 @@
+uuid: dd771308-8463-4ca3-b1eb-5f9fd6db7888
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - honey
+_core:
+  default_config_hash: Intk2MbRno7ZV9-LHc1Wtcs7YTU2sbmR6-deEwIep80
+id: honey_content
+theme: honey
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
