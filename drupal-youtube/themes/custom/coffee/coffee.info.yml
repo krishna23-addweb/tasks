@@ -1,0 +1,10 @@
+name: Coffee
+description: this is coffee theme
+type: theme
+core: 8.x
+package: others
+core_version_requirement: ^8 || ^9
+base theme: false
+
+libraries:
+  - coffee/global-css-and-js

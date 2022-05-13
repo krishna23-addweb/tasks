@@ -1,0 +1,4 @@
+global-css-and-js:
+  css:
+    theme:
+      css/style.css: {}
