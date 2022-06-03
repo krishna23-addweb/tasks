@@ -1,12 +1,23 @@
 <header class="header">
 
     <a href="#" class="logo">
-        <img src="{{directory}}/images/logo.png" alt="">
+        
+        {{page.logo}}
     </a>
 
     
+    <nav class="navbar">
+        {# <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#menu">menu</a>
+        <a href="#products">products</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="#blogs">blogs</a> #}
+        {{page.nav}}
+    </nav>
 
-    <div class="icons">
+    {# <div class="icons">
         <div class="fas fa-search" id="search-btn"></div>
         <div class="fas fa-shopping-cart" id="cart-btn"></div>
         <div class="fas fa-bars" id="menu-btn"></div>
@@ -15,6 +26,9 @@
     <div class="search-form">
         <input type="search" id="search-box" placeholder="search here...">
         <label for="search-box" class="fas fa-search"></label>
+    </div> #}
+    <div>
+        {{page.header_right}}
     </div>
 
     <div class="cart-items-container">
@@ -62,9 +76,7 @@
 <section class="home" id="home">
 
     <div class="content">
-        <h3>fresh coffee in the morning</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat labore, sint cupiditate distinctio tempora reiciendis.</p>
-        <a href="#" class="btn">get yours now</a>
+        {{page.home}}
     </div>
 
 </section>
@@ -79,7 +91,7 @@
 
     <div class="row">
 
-        <div class="image">
+        {# <div class="image">
             <img src="{{directory}}/images/about-img.jpeg" alt="">
         </div>
 
@@ -88,8 +100,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim tempora ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis cupiditate. Ex, vel?</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis, nihil voluptas culpa! Neque consectetur obcaecati sapiente?</p>
             <a href="#" class="btn">learn more</a>
-        </div>
-
+        </div> #}
+        {{page.about}}
     </div>
 
 </section>
@@ -104,7 +116,7 @@
 
     <div class="box-container">
 
-        <div class="box">
+        {# <div class="box">
             <img src="{{directory}}/images/menu-1.png" alt="">
             <h3>tasty and healty</h3>
             <div class="price">$15.99 <span>20.99</span></div>
@@ -144,7 +156,8 @@
             <h3>tasty and healty</h3>
             <div class="price">$15.99 <span>20.99</span></div>
             <a href="#" class="btn">add to cart</a>
-        </div>
+        </div> #}
+        {{page.menu}}
 
     </div>
 
@@ -159,7 +172,7 @@
     <div class="box-container">
 
         <div class="box">
-            <div class="icons">
+            {# <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-eye"></a>
@@ -177,11 +190,12 @@
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                 <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
+            </div> #}
+            {{page.product_left}}
         </div>
 
         <div class="box">
-            <div class="icons">
+            {# <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-eye"></a>
@@ -199,11 +213,12 @@
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                 <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
+            </div> #}
+            {{page.product_center}}
         </div>
 
         <div class="box">
-            <div class="icons">
+            {# <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-eye"></a>
@@ -221,7 +236,8 @@
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                 <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
+            </div> #}
+            {{page.product_right}}
         </div>
 
     </div>
@@ -237,7 +253,7 @@
     <div class="box-container">
 
         <div class="box">
-            <img src="{{directory}}/images/quote-img.png" alt="" class="quote">
+            {# <img src="{{directory}}/images/quote-img.png" alt="" class="quote">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
             <img src="{{directory}}/images/pic-1.png" class="user" alt="">
             <h3>john deo</h3>
@@ -247,11 +263,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
-            </div>
-        </div>
+            </div> #}
+            {{page.review_left}}
 
+        </div>
+        
         <div class="box">
-            <img src="{{directory}}/images/quote-img.png" alt="" class="quote">
+            {# <img src="{{directory}}/images/quote-img.png" alt="" class="quote">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
             <img src="{{directory}}/images/pic-2.png" class="user" alt="">
             <h3>john deo</h3>
@@ -261,11 +279,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
-            </div>
+            </div> #}
+            {{page.review_center}}
+
         </div>
         
         <div class="box">
-            <img src="{{directory}}/images/quote-img.png" alt="" class="quote">
+            {# <img src="{{directory}}/images/quote-img.png" alt="" class="quote">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
             <img src="{{directory}}/images/pic-3.png" class="user" alt="">
             <h3>john deo</h3>
@@ -275,7 +295,9 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
-            </div>
+            </div> #}
+            {{page.review_right}}
+
         </div>
 
     </div>
@@ -290,7 +312,7 @@
 
     <h1 class="heading"> <span>contact</span> us </h1>
 
-    <div class="row">
+    {# <div class="row">
 
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1629452077891!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
 
@@ -311,7 +333,8 @@
             <input type="submit" value="contact now" class="btn">
         </form>
 
-    </div>
+    </div> #}
+    {{page.contact}}
 
 </section>
 
@@ -325,7 +348,7 @@
 
     <div class="box-container">
 
-        <div class="box">
+        {# <div class="box">
             <div class="image">
                 <img src="{{directory}}/images/blog-1.jpeg" alt="">
             </div>
@@ -359,8 +382,8 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
                 <a href="#" class="btn">read more</a>
             </div>
-        </div>
-
+        </div> #}
+        {{page.blogs}}
     </div>
 
 </section>
@@ -372,25 +395,31 @@
 <section class="footer">
 
     <div class="share">
-        <a href="https://facebook.com/freewebsitecode/" class="fab fa-facebook-f"></a>
+        {# <a href="https://facebook.com/freewebsitecode/" class="fab fa-facebook-f"></a>
         <a href="https://freewebsitecode.com/" class="fab fa-twitter"></a>
         <a href="https://freewebsitecode.com/" class="fab fa-instagram"></a>
         <a href="https://freewebsitecode.com/" class="fab fa-linkedin"></a>
         <a href="https://freewebsitecode.com/" class="fab fa-pinterest"></a>
         <a href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos" class="fab fa-youtube"></a>
+     #}
+     {{page.footer1}}
     </div>
 
     <div class="links">
-        <a href="#">home</a>
+        {# <a href="#">home</a>
         <a href="#">about</a>
         <a href="#">menu</a>
         <a href="#">products</a>
         <a href="#">review</a>
         <a href="#">contact</a>
-        <a href="#">blogs</a>
+        <a href="#">blogs</a> #}
+        {{page.footer2}}
     </div>
 
-    <div class="credit">created by <span><a href="https://freewebsitecode.com/">Free Website Code</a></span> | all rights reserved</div>
+    <div class="credit">
+    {# created by <span><a href="https://freewebsitecode.com/">Free Website Code</a></span> | all rights reserved #}
+    {{page.footer3}}
+    </div>
 
 </section>
 

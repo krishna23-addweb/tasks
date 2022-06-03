@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="temp">
+        
+    </div>
+
+    <script>
+    
+    fetch('https://api.stockdata.org/v1/data/quote?symbols=AAPL,TSLA,MSFT&api_token=rgZhi3u1F3R5pMiH0ERm5ovuRGxQW46MOE2aLgDX')
+    .then(res=> res.json())
+    .then(res=>{
+      console.log(res)
+      console.log(res.articles)
+      const n1 = document.getElementById('temp')
+      var a = ""
+        var l = res.data.length
+        for (var i = 0; i < l; i++) {
+            a += `<h4>${res.data[i].name}</h4><br/>` + `${res.data[i].exchange_short}<br/>`+ `${res.data[i].exchange_long}<br/>`+ `${res.data[i].price}<br/>`+ `${res.data[i].day_low}<br/>`+ `${res.data[i].day_high}<br/>`+ `${res.data[i].currency}<br/><br/>`
+        }
+        n1.innerHTML = a
+      
+    })
+    .catch(err=>{
+      console.log(err)
+    }) 
+    
+    </script>
+</body>
+</html>
+

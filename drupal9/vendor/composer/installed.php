@@ -1,13 +1,13 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '9.3.12',
-        'version' => '9.3.12.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '68a1f3fca220f5a126ea50d7eeccfb75216e9cd9',
+        'reference' => 'd390391964e4ec11e60b2adfe8dc725059c1ac23',
         'name' => 'drupal/legacy-project',
-        'dev' => false,
+        'dev' => true,
     ),
     'versions' => array(
         'asm89/stack-cors' => array(
@@ -530,12 +530,12 @@
             ),
         ),
         'drupal/legacy-project' => array(
-            'pretty_version' => '9.3.12',
-            'version' => '9.3.12.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '68a1f3fca220f5a126ea50d7eeccfb75216e9cd9',
+            'reference' => 'd390391964e4ec11e60b2adfe8dc725059c1ac23',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -663,6 +663,15 @@
             'replaced' => array(
                 0 => '9.3.12',
             ),
+        ),
+        'drupal/restui' => array(
+            'pretty_version' => '1.20.0',
+            'version' => '1.20.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/restui',
+            'aliases' => array(),
+            'reference' => '8.x-1.20',
+            'dev_requirement' => false,
         ),
         'drupal/search' => array(
             'dev_requirement' => false,

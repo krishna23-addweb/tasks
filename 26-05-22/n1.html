@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Top News </h3>
+    <div id="news_one">
+        
+    </div>
+
+    <script>
+        let news_data = null
+const getNewsData = async () => {
+    
+    await fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=398a122378434b528b1bb97dd9b712cb')
+    .then(res=> res.json())
+    .then(res=>{
+      console.log(res)
+      console.log(res.articles)
+      news_data = res.articles
+   
+    })
+    .catch(err=>{
+      console.log(err)
+    })
+    return news_data
+}
+
+const fetchNews = async()=>{
+    const data = await getNewsData()
+    console.log(data)
+    console.log(data[19])
+    const n1 = document.getElementById('news_one')
+    var a = ""
+    const heading1 = `<h3> ${data[19].title}</h3>`
+    const imgData1 = `<img src=${data[19].urlToImage} />`
+    n1.innerHTML = heading1 + imgData1
+    
+}
+fetchNews()
+    </script>
+</body>
+</html>

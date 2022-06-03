@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h3>Top News </h3> -->
+    <div id="news_one">
+        
+    </div>
+
+    <script>
+    
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=807eb64a474d194534d90c09463d5cdf&units=metric')
+    .then(res=> res.json())
+    .then(res=>{
+      console.log(res)
+      const n1 = document.getElementById('news_one')
+      var a = ""
+      
+      a += `<img src=http://openweathermap.org/img/w/`+`${res.weather[0].icon}`+`.png width="80" height="100"/>` + `<h3> ${res.name}</h3>` + `<h3> ${res.main.temp}</h3>` + `<h3> ${res.main.temp_min}</h3>`  + `<h3> ${res.main.temp_max}</h3>`+ `<h3> ${res.main.humidity}</h3>`
+      n1.innerHTML = a
+    })
+    
+    .catch(err=>{
+      console.log(err)
+    }) 
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <body>
+<script>
+function addScript(src) { var s = document.createElement('script'); s.src = src; document.head.appendChild(s); }
+window.imdb$foo = function (results) {
+  /* ... */
+};
+addScript('https://sg.media-imdb.com/suggests/f/foo.json');
+
+// 2) Using jQuery (JSON-P)
+jQuery.ajax({
+    url: 'https://sg.media-imdb.com/suggests/f/foo.json',
+    dataType: 'jsonp',
+    cache: true,
+    jsonp: false,
+    jsonpCallback: 'imdb$foo'
+}).then(function (results) {
+    /* ... */
+});
+
+// 3) Pure JSON (with jQuery)
+// Use a local proxy to the clean `/suggestion` API.
+jQuery.getJSON('/api/imdb/?q=foo', function (results) {
+    /* ... */
+});
+
+// 4) Pure JSON (plain JavaScript; Modern ES6, ES2017, and Fetch API)
+// Serve a "/api" route in your app, that proxies (and caches!)
+// to v2.sg.media-imdb.com/suggestion/h/hello.json
+const resp = await fetch('/api/imdb/?q=foo');
+const results = await resp.json();
+</script>
+</body>
+</html>

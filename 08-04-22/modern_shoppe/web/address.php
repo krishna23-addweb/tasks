@@ -52,55 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<!--header-->
 	<div class="header">
-	<div class="top-header navbar navbar-default"><!--header-one-->
-			<div class="container">
-				<div class="nav navbar-nav wow fadeInLeft animated" data-wow-delay=".5s">
-					<p>Welcome to Modern Shoppe <a href="register.php">Register </a> Or <a href="signin.php">Sign In </a></p>
-				</div>
-				<div class="nav navbar-nav navbar-right social-icons wow fadeInRight animated" data-wow-delay=".5s">
-					<ul>
-						<li><a href="#"> </a></li>
-						<li><a href="#" class="pin"> </a></li>
-						<li><a href="#" class="in"> </a></li>
-						<li><a href="#" class="be"> </a></li>
-						<li><a href="#" class="you"> </a></li>
-						<li><a href="#" class="vimeo"> </a></li>
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-		<div class="header-two navbar navbar-default"><!--header-two-->
-			<div class="container">
-				<div class="nav navbar-nav header-two-left">
-					<ul>
-						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 892</li>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mail@example.com</a></li>			
-					</ul>
-				</div>
-				<div class="nav navbar-nav logo wow zoomIn animated" data-wow-delay=".7s">
-					<h1><a href="index.html">Modern <b>Shoppe</b><span class="tag">Everything for Kids world </span> </a></h1>
-				</div>
-				<div class="nav navbar-nav navbar-right header-two-right">
-					<div class="header-right my-account">
-						<a href="contact.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> CONTACT US</a>						
-					</div>
-					<div class="header-right cart">
-						<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-						<h4><a href="checkout.html">
-								<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
-						</a></h4>
-						<div class="cart-box">
-							<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
+		<?php include('header.php'); ?>
 	</div>
 	<!--//header-->
 	<!--breadcrumbs-->
@@ -124,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h4>Welcome to Modern Shoppe !  </h4>
 			</div>
 			<div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
-				<form method="post">
+				<form method="post" action="pay.php">
 					<input type="text" class="user" name="name" placeholder="Name" required="">
                     <input type="number" class="user" name="phone" placeholder="Mobile" required="">
                     <input type="number" class="user" name="Pincode" placeholder="Pincode" required="">
@@ -134,7 +86,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <input type="text" class="user" name="CD" placeholder="City/District" required="">
                     Type of Address: <br><br><input type="radio" name="radio1" value="type1" required="">&nbsp;&nbsp;&nbsp;<label>Home</label>&nbsp;&nbsp;&nbsp;
 					<input type="radio" name="radio1" value="type1" required="">&nbsp;&nbsp;&nbsp;<label>Office</label>
-					<input type="submit" name="proceed" value="Proceed to Pay">
+					
+					<input type="submit" name="proceed" value="Proceed to Pay" >
 					<!-- <div class="forgot-grid">
 						<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Remember me</label>
 						<div class="forgot">
@@ -182,14 +135,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="js/bootstrap.js"></script>
 </body>
 </html>
-<?php
-ob_start();
+<!-- 
+// ob_start();
 
-if(isset($_POST['proceed'])){
-	header('Location:pay.php');
-}
+// if(isset($_POST['proceed'])){
+// 	header('Location:pay.php');
+// }
 
-?>
+?> -->
 <!-- // ob_start();
 // if(isset($_POST['Sign_In'])){
 //     $email=$_POST['email'];

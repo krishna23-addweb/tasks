@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <form method="post">
+            Username: <input type="text" id="username" /><br><br>
+            Password: <input type="password" id="password" /><br><br>
+            <input type="button" value="Login" id="login" onclick="connect()" />
+        </form>
+        <div id="main"></div>
+        <script>
+            function connect(){
+                fetch("http://localhost:49156/session/token")
+                .then(function (response){
+                    return response;
+                })
+                .then(function (token){
+                    console.log("CSRF Token "+ token);
+                    userlogin(token);
+                })
+            }
+
+            function userlogin(csrfToken){
+                let name = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+                fetch("http://localhost:49156/user/login?_format=json",{
+                    method: "POST",
+                    headers:{
+                        "Content-Type": "application/json",
+                        "X-CSRF_Token": csrfToken,
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        pass: password,
+                    }),
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                    if(data.message){
+                        alert(data.message);
+                    }
+                    else{
+                        let main = document.querySelector("#main");
+                        main.innerHTML = "Welcome " + data.current_user.name;
+
+                    }
+                });
+            }
+
+        </script>
+    </body>
+</html>

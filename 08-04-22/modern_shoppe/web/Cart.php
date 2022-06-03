@@ -1,10 +1,14 @@
 <?php 
 ob_start();
 session_start();
+
 if(!isset($_SESSION['name']))
 {
 	header('Location:signin.php');
 }
+
+	
+
 else
 {
 ?>
@@ -106,11 +110,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			<?php
 				ob_start();
-                                
+				$mail=$_SESSION['email'];              
 				try {
 					$conn = new PDO("mysql:host=localhost;dbname=admin_panel", "root", "");
 		
-					$sql='select * from Cart';
+					$sql="select * from Cart where Email = '$mail' ";
 					$q=$conn->query($sql);
 					//$query=mysqli_query($conn,"") or die("error in query");
 					$q->setFetchMode(PDO::FETCH_ASSOC);
@@ -150,9 +154,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					die("Could not connect to the database :" . $e->getMessage());
 				}
 			?>
-			<div class="btn_form">
-				<?php echo "<a href=address.php class=add-cart item_add>Proceed</a>	";?>
-			</div>		
+			<form action="address.php">
+				<input type="submit" name="proceed" value="Proceed to Pay" >
+			</form>
+			<!-- <div class="btn_form">
+				 echo "<a href=address.php class=add-cart item_add>Proceed</a>	";
+			</div>		 -->
 		</div>
 	</div>
 	<!--//cart-items-->	

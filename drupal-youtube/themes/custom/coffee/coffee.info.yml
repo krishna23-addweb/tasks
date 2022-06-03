@@ -8,3 +8,22 @@ base theme: false
 
 libraries:
   - coffee/global-css-and-js
+
+regions:
+  logo: 'Logo'
+  nav: 'Navbar'
+  header_right: 'Header_right'
+  home: 'Home'
+  about:  'About'
+  menu: 'Menu'
+  product_left: 'Product Left'
+  product_center: 'Product Center'
+  product_right: 'Product Right'
+  review_left: 'Review Left'
+  review_right: 'Review Right'
+  review_center: 'Review Center'
+  contact: 'Contact'
+  blogs: 'Blogs'
+  footer1 : 'footer1'
+  footer2: 'footer2'
+  footer3: 'footer3'
